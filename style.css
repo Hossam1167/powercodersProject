@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-blue: #493bcc;
+  --main-purple: #a334a2;
+  --main-rose: #e93982;
+  --main-yellow: #f8d776;
+  --diffused-black: #212121;
+  --h1-size-look: 3.052rem;
+  --h2-size-look: 2.441rem;
+  --h3-size-look: 1.953rem;
+  --h4-size-look: 1.563rem;
+  --h5-size-look: 1.25rem;
+  --h6-size-look: 1rem;
+  --p-size-look: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+/* Start main nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  background: linear-gradient(90.81deg, #3a3cd3 -12.23%, #af339d 108.13%);
+}
+nav h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: var(--h4-size-look);
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 0.5rem;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  nav ul {
+    flex-direction: row;
+    font-size: 1.2rem;
+  }
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+nav ul li:last-child {
+  background-color: red;
+  text-align: center;
+  width: 5.5rem;
+  border-radius: 20.6058px;
+  box-shadow: 0px 5.08455px 24.1516px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+  color: white;
+}
+/* End main nav */
+/* Start form style */
+main {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    133.55deg,
+    #493bcc -14.43%,
+    #a434a2 104.88%
+  );
+  width: max-content;
+  border-radius: 28.7161px;
+  padding: 1.5rem 1rem;
+  margin-top: 1rem;
+  min-width: 15vw;
+}
+.login-form {
+  min-width: 60vw;
+}
+form input {
+  margin: 0.5rem 0;
+  padding-left: 15px;
+  height: 2rem;
+  border-radius: 39.2453px;
+  border: 1px solid rgba(0, 0, 0, 0.408);
+  min-width: 19rem;
+}
+
+form input::placeholder {
+  color: rgba(0, 0, 0, 0.326);
+}
+form label {
+  color: white;
+  font-size: 1rem;
+}
+form a {
+  font-size: 0.6rem;
+  color: var(--main-yellow);
+  margin-bottom: 0.5rem;
+}
+form button {
+  width: 7.3rem;
+  height: 2.5rem;
+  border-radius: 6.03093px;
+  border: none;
+  align-self: flex-end;
+  margin-top: 2.5rem;
+  background-color: white;
+}
+form button:hover {
+  background-color: var(--main-yellow);
+}
+form p {
+  font-size: 0.7rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+form p::before {
+  content: "*";
+  color: red;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+/* End form style */
+/* Start support card*/
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  background: rgba(196, 196, 196, 0.09);
+  box-shadow: 0px 3.66px 3.66px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10.98px);
+  border-radius: 27.45px;
+  margin-top: 2rem;
+}
+aside article {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem 0.7rem;
+}
+aside article a {
+  display: flex;
+  align-items: center;
+}
+/* End support card*/
+/*#########################################################################
+User Page starterd
+*/
+/*Start Information Section*/
+.information-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.information-section h2 {
+  font-size: 0.8rem;
+}
+/*End Information Section*/
+
+/*Start Visa Card style*/
+.slider,
+fieldset {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+section {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.Card-slider {
+  display: flex;
+  background-color: #6e38bb;
+  width: 100%;
+  border-radius: 59px;
+  margin-right: 15px;
+  padding: 10px 25px;
+}
+/*############ Add Button ###########3*/
+.add-new-card {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #483bcc;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  border: none;
+  flex-shrink: 0;
+  flex-basis: 60px;
+}
+
+.button-wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-wraper h4 {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+.visa-card {
+  width: 182px;
+  height: 116px;
+  background-image: url(./img/VisaCard/Visa\ card.svg);
+  position: relative;
+}
+.visanumber,
+.user-name {
+  font-size: 0.7rem;
+  position: absolute;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: white;
+}
+.valid-number {
+  font-size: 0.3rem;
+  position: absolute;
+  bottom: 24px;
+  left: 54px;
+  font-weight: 400;
+  line-height: 0.3rem;
+  color: white;
+}
+.valid-number strong {
+  font-size: 0.6rem;
+  margin-left: 0.3rem;
+}
+.visanumber {
+  top: 63px;
+  left: 17px;
+}
+.user-name {
+  bottom: 5px;
+  left: 17px;
+}
+/*End Visa Card style*/
+/*Start Quick Transfer style*/
+.quick-transfer {
+  font-size: var(--h4-size-look);
+  font-weight: 700;
+}
+#userPageTransfer {
+  width: 100%;
+  max-width: 100%;
+  background-image: none;
+  background-color: #c4c4c4 !important;
+}
+.first-row-form {
+  width: 260px;
+  display: flex;
+  align-items: center;
+
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+#amount {
+  width: 100px;
+  min-width: 100px;
+}
+#currency {
+  height: 35px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: #4d4d4d;
+}
+#userPageTransfer button {
+  background: #618d4e;
+  box-shadow: 0px 4.08847px 19.4202px rgba(0, 0, 0, 0.25);
+  border-radius: 16.5691px;
+}
+/*End Quick Transfer style*/
+/*Start Useful links*/
+.useful-links-section {
+  display: none;
+}
+.useful-links-list {
+  background-color: #c4c4c4;
+  border-radius: 55px;
+  padding: 2rem;
+}
+.useful-links-list li {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+/*End Useful links*/
+
+/*Start Transactions*/
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+}
+.transaction-list p {
+  font-size: 0.6rem;
+}
+.withdraw {
+  background-color: #fabbbb;
+  border-radius: 19px;
+  padding: 0 1rem 1rem 1rem;
+  margin-top: 1.5rem;
+}
+.deposit {
+  background-color: #c7f2b3;
+  border-radius: 19px;
+  padding: 0 1rem 1rem 1rem;
+  margin-top: 1.5rem;
+}
+.deposit:hover,
+.withdraw:hover {
+  box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
+}
+
+.transaction-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+/*End Transactions*/
+/*#########################################################################
+/* Start Desktop strucure col*/
+@media (min-width: 700px) {
+  .column-wraper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 6rem;
+  }
+  .useful-links-section {
+    display: block;
+  }
+  .side-col {
+    width: 20%;
+  }
+}
+
+/* End Desktop strucure col*/

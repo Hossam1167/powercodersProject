@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Matrial icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Main style sheet-->
+    <link rel="stylesheet" href="./style.css" />
+    <!--Main script-->
+    <script src="./script.js" defer></script>
+    <title>User page</title>
+  </head>
+  <body>
+    <!--Main Nav-->
+    <nav>
+      <h1>banking</h1>
+      <ul>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Transfer</a></li>
+        <li><a href="#">Settings</a></li>
+        <li>
+          <a href="./index.html">signout</a>
+        </li>
+      </ul>
+    </nav>
+    <!--Main nav End -->
+    <!--Main section start-->
+    <section class="information-section">
+      <h2 id="username">User-name</h2>
+      <p>Balance:<strong id="balance123">6000</strong>CHF</p>
+    </section>
+    <section class="slider">
+      <ul class="Card-slider">
+        <li class="visa-card">
+          <h3 class="visanumber">1234 5678 9012 2345</h3>
+          <h4 class="valid-number">
+            Valid<br />
+            THRU<strong>01/2024</strong>
+          </h4>
+          <h3 class="user-name">Lorem ipsum dolor sit</h3>
+        </li>
+      </ul>
+
+      <button class="add-new-card" role="button">Add Card</button>
+    </section>
+    <div class="column-wraper">
+      <!--Main section End -->
+      <section class="side-col">
+        <!--Start Quick Transfer -->
+        <fieldset>
+          <legend class="quick-transfer">Quick Transfer</legend>
+          <form
+            action="#"
+            method="post"
+            autocomplete="on"
+            id="userPageTransfer"
+          >
+            <div class="first-row-form">
+              <label for="amount">Amount:</label>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                placeholder="Amount "
+              />
+              <label for="currency">Currency:</label>
+              <select name="currency" id="currency">
+                <option value="CHF">CHF</option>
+                <option value="euro">&euro;</option>
+                <option value="dollar">&dollar;</option>
+                <option value="Englishpound">&pound;</option>
+              </select>
+            </div>
+            <label for="iban-account">IBAN / Account:</label>
+            <input
+              type="text"
+              name="iban-account"
+              id="iban-accont"
+              placeholder="IBAN / Acoount"
+            />
+            <button type="submit">Transfer</button>
+          </form>
+        </fieldset>
+        <!--End Quick Transfer -->
+        <!--Start Useful Links "Disktop virsion only" -->
+        <section class="useful-links-section">
+          <h2>Useful Links</h2>
+          <ul class="useful-links-list">
+            <li><a href="#">Account Support</a></li>
+            <li><a href="#">Investmet Support</a></li>
+            <li><a href="#">Change information</a></li>
+            <li><a href="#">Report a bug</a></li>
+            <li><a href="#">Request Documents</a></li>
+            <li><a href="#">Account Support</a></li>
+          </ul>
+        </section>
+        <!--End Useful Links "Disktop virsion only" -->
+      </section>
+      <!--Start Trasactions  -->
+      <section>
+        <h2>Trasactions</h2>
+        <ul class="transaction-list">
+          <li class="withdraw">
+            <div class="transaction-name-row">
+              <h5>Coop</h5>
+              <p>01.04.2022</p>
+              <p>-<strong>300</strong>CHF</p>
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nulla
+              facilis eius placeat porro iusto!
+            </p>
+          </li>
+          <li class="deposit">
+            <div class="transaction-name-row">
+              <h5>CSS Insurance</h5>
+              <p>01.04.2022</p>
+              <p>-<strong>300</strong>CHF</p>
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nulla
+              facilis eius placeat porro iusto!
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!--End Trasactions  -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Matrial icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Main style sheet-->
+    <link rel="stylesheet" href="./style.css" />
+    <!--Main script-->
+    <script src="./script.js" defer></script>
+    <title>Banking</title>
+  </head>
+  <body>
+    <!--Main Nav-->
+    <nav>
+      <h1>banking</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="">Help</a></li>
+      </ul>
+    </nav>
+    <!--Main nav End -->
+    <!-- Start Main Content -->
+    <div class="container">
+      <main>
+        <h3>Login</h3>
+        <form action="./user.html" method="post" class="login-form">
+          <label for="username"
+            >E-finannce & Username<span style="color: red"> * </span>:</label
+          >
+          <input
+            type="text"
+            id="username"
+            placeholder="Your E-finannce & Username"
+            name="E-finannce & Username"
+            required
+          />
+          <label for="password"
+            >Password<span style="color: red"> * </span>:</label
+          >
+          <input
+            type="password"
+            id="password"
+            placeholder="Your password"
+            name="password"
+            required
+          />
+          <a href="#" class="reset-password">Password forgotten / change</a>
+          <label for="userIdentification">User identification:</label>
+          <input
+            type="text"
+            id="userIdentification"
+            placeholder="Your User identification"
+            name="userIdentification"
+          />
+          <p>This is a required field</p>
+          <button type="submit">Login</button>
+        </form>
+      </main>
+      <!-- End  Main Content -->
+      <aside>
+        <!--Support card rows are represnted by Article tag-->
+        <article>
+          <h3>Do you need new account?</h3>
+          <a href="#"
+            >Personal Account<span class="material-icons">
+              navigate_next
+            </span></a
+          >
+          <a href="#"
+            >business Account<span class="material-icons">
+              navigate_next
+            </span></a
+          >
+        </article>
+        <article>
+          <h3>Do you need new account?</h3>
+          <a href="#"
+            >Personal Account<span class="material-icons">
+              navigate_next
+            </span></a
+          >
+          <a href="#"
+            >business Account<span class="material-icons">
+              navigate_next
+            </span></a
+          >
+        </article>
+        <article>
+          <h3>Do you need new account?</h3>
+          <a href="#"
+            >Personal Account<span class="material-icons">
+              navigate_next
+            </span></a
+          >
+          <a href="#"
+            >business Account<span class="material-icons">
+              navigate_next
+            </span></a
+          >
+        </article>
+      </aside>
+    </div>
+  </body>
+</html>
