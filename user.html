@@ -12,54 +12,62 @@
     <!--Main style sheet-->
     <link rel="stylesheet" href="./style.css" />
     <!--Main script-->
-    <script src="./script.js" defer></script>
+
+    <script src="./userUi.js" defer></script>
+
     <title>User page</title>
   </head>
   <body>
     <!--Main Nav-->
-    <nav>
+    <nav class="userNav">
       <h1>banking</h1>
-      <ul>
+      <div class="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-list">
         <li><a href="#">Account</a></li>
         <li><a href="#">Transfer</a></li>
         <li><a href="#">Settings</a></li>
         <li>
-          <a href="./index.html">signout</a>
+          <a href="./index.html">Signout</a>
         </li>
       </ul>
     </nav>
     <!--Main nav End -->
     <!--Main section start-->
     <section class="information-section">
-      <h2 id="username">User-name</h2>
+      <div class="userInformation">
+        <span style="color: #3a3cd3; font-weight: 500"
+          >Welcome,
+          <h2 id="username">User-name</h2></span
+        >
+        <h3 id="userIbanNumber">lkasndkasnd</h3>
+      </div>
       <p>Balance:<strong id="balance123">6000</strong>CHF</p>
     </section>
     <section class="slider">
       <ul class="Card-slider">
-        <li class="visa-card">
+        <li class="visa-card-1">
           <h3 class="visanumber">1234 5678 9012 2345</h3>
           <h4 class="valid-number">
             Valid<br />
             THRU<strong>01/2024</strong>
           </h4>
-          <h3 class="user-name">Lorem ipsum dolor sit</h3>
+          <h3 class="user-name" id="visaCardName"></h3>
         </li>
       </ul>
 
-      <button class="add-new-card" role="button">Add Card</button>
+      <button class="add-new-card" role="button" id="addCard">Add Card</button>
     </section>
     <div class="column-wraper">
       <!--Main section End -->
       <section class="side-col">
         <!--Start Quick Transfer -->
-        <fieldset>
+        <fieldset id="transferSection">
           <legend class="quick-transfer">Quick Transfer</legend>
-          <form
-            action="#"
-            method="post"
-            autocomplete="on"
-            id="userPageTransfer"
-          >
+          <form action="#" method="get" autocomplete="on" id="userPageTransfer">
             <div class="first-row-form">
               <label for="amount">Amount:</label>
               <input
@@ -76,14 +84,14 @@
                 <option value="Englishpound">&pound;</option>
               </select>
             </div>
-            <label for="iban-account">IBAN / Account:</label>
+            <label for="ibanAccount">IBAN number:</label>
             <input
               type="text"
               name="iban-account"
-              id="iban-accont"
-              placeholder="IBAN / Acoount"
+              id="ibanAaccont"
+              placeholder="IBAN number"
             />
-            <button type="submit">Transfer</button>
+            <button type="button" id="transferBtn">Transfer</button>
           </form>
         </fieldset>
         <!--End Quick Transfer -->
@@ -104,12 +112,13 @@
       <!--Start Trasactions  -->
       <section>
         <h2>Trasactions</h2>
-        <ul class="transaction-list">
-          <li class="withdraw">
+
+        <ul class="transaction-list" id="transactionContanier">
+          <li class="Withdrawal">
             <div class="transaction-name-row">
-              <h5>Coop</h5>
-              <p>01.04.2022</p>
-              <p>-<strong>300</strong>CHF</p>
+              <h5 class="transactiontype">Coop</h5>
+              <p class="transactiondate">01.04.2022</p>
+              <p>-<strong class="transactionAmmount">300</strong>CHF</p>
             </div>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nulla
@@ -118,9 +127,9 @@
           </li>
           <li class="deposit">
             <div class="transaction-name-row">
-              <h5>CSS Insurance</h5>
-              <p>01.04.2022</p>
-              <p>-<strong>300</strong>CHF</p>
+              <h5 class="transactionType">CSS Insurance</h5>
+              <p class="transactiondate">01.04.2022</p>
+              <p>-<strong class="transactionAmmount">300</strong>CHF</p>
             </div>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nulla
@@ -130,6 +139,20 @@
         </ul>
       </section>
       <!--End Trasactions  -->
+      <!-- Start Card Selector pop up   -->
+
+      <!-- <div class="popup-inputs">
+        <form action="get" action="" autocomplete="on" id="colorInput">
+          <label for="colorBrown">Brown</label>
+          <input
+            type="image"
+            src="./img/aerial-shot-beautiful-hintertux-glacier-sunlight.jpg"
+            alt="Brown card "
+          />
+        </form>
+      </div> -->
+
+      <!--End Card Selector pop up   -->
     </div>
   </body>
 </html>

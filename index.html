@@ -12,7 +12,9 @@
     <!--Main style sheet-->
     <link rel="stylesheet" href="./style.css" />
     <!--Main script-->
-    <script src="./script.js" defer></script>
+
+    <script src="./app.js" defer></script>
+
     <title>Banking</title>
   </head>
   <body>
@@ -29,26 +31,29 @@
     <div class="container">
       <main>
         <h3>Login</h3>
-        <form action="./user.html" method="post" class="login-form">
-          <label for="username"
+        <form method="get" class="login-form" name="loginForm" id="loginForm">
+          <label for="username1236"
             >E-finannce & Username<span style="color: red"> * </span>:</label
           >
           <input
             type="text"
-            id="username"
+            id="username1236"
             placeholder="Your E-finannce & Username"
-            name="E-finannce & Username"
+            name="EfinannceUsername"
             required
+            value=""
           />
-          <label for="password"
+          <label for="passwordFine"
             >Password<span style="color: red"> * </span>:</label
           >
           <input
             type="password"
-            id="password"
+            id="passwordFine"
             placeholder="Your password"
             name="password"
             required
+            autocomplete="Current password"
+            value=""
           />
           <a href="#" class="reset-password">Password forgotten / change</a>
           <label for="userIdentification">User identification:</label>
@@ -59,7 +64,7 @@
             name="userIdentification"
           />
           <p>This is a required field</p>
-          <button type="submit">Login</button>
+          <button type="button" value="login" id="loginBtn1">Submit</button>
         </form>
       </main>
       <!-- End  Main Content -->

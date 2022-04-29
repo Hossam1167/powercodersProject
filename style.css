@@ -31,6 +31,7 @@ html {
 body {
   font-family: "poppins", sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 .container {
   display: flex;
@@ -49,6 +50,7 @@ nav {
   padding: 1rem 1.5rem;
   width: 100%;
   background: linear-gradient(90.81deg, #3a3cd3 -12.23%, #af339d 108.13%);
+  position: relative;
 }
 nav h1 {
   text-transform: uppercase;
@@ -63,25 +65,83 @@ a {
 nav ul {
   display: flex;
   list-style: none;
-  font-size: 0.5rem;
+  font-size: 1.5rem;
+  gap: 1rem;
   flex-direction: column;
+}
+
+.nav-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+  -moz-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+  z-index: 15;
+}
+.nav-icon span {
+  background-color: white;
+  height: 0.3rem;
+}
+
+.nav-list {
+  position: fixed;
+  right: -200px;
+  top: 0;
+  height: 100vh;
+  padding-top: 8rem;
+  width: 50vw;
+  background: rgba(76, 75, 75, 0.09);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+  text-align: center;
+  z-index: 10;
+  transition: right 0.5s ease-in;
+  -webkit-transition: right 0.5s ease-in;
+  -moz-transition: right 0.5s ease-in;
+  -ms-transition: right 0.5s ease-in;
+  -o-transition: right 0.5s ease-in;
+}
+.active {
+  right: 0;
 }
 @media (min-width: 700px) {
   nav ul {
     flex-direction: row;
     font-size: 1.2rem;
+    background-color: transparent;
+  }
+  .nav-icon {
+    display: none;
+  }
+  .nav-list {
+    position: inherit;
+    height: inherit;
+    background: none;
+    box-shadow: none;
+    padding-top: 0;
   }
 }
 
 nav ul li {
   margin-right: 20px;
 }
-nav ul li:last-child {
+nav ul li:last-child a {
   background-color: red;
   text-align: center;
   width: 5.5rem;
   border-radius: 20.6058px;
   box-shadow: 0px 5.08455px 24.1516px rgba(0, 0, 0, 0.25);
+  font-size: 1.3rem;
+  padding: 0.3rem 0.5rem;
 }
 
 nav a {
@@ -131,7 +191,8 @@ form a {
   color: var(--main-yellow);
   margin-bottom: 0.5rem;
 }
-form button {
+form button,
+#loginBtn1 {
   width: 7.3rem;
   height: 2.5rem;
   border-radius: 6.03093px;
@@ -184,14 +245,24 @@ User Page starterd
 .information-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 2rem;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+.userInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .information-section h2 {
+  font-size: 1rem;
+  color: #212121;
+}
+.information-section h3 {
   font-size: 0.8rem;
+  font-weight: 400;
 }
 /*End Information Section*/
 
@@ -250,11 +321,36 @@ section {
   font-size: 0.7rem;
   margin-top: 1rem;
 }
-.visa-card {
+.visa-card-1 {
   width: 182px;
   height: 116px;
-  background-image: url(./img/VisaCard/Visa\ card.svg);
+  background-image: url(./img/VisaCard/Visa-card.svg);
   position: relative;
+  margin-left: 15px;
+}
+.visa-card-2 {
+  width: 182px;
+  height: 116px;
+  background-image: url(./img/VisaCard/MasterCrad-trans-Logo.svg);
+  position: relative;
+  margin-left: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.visa-card-3 {
+  width: 182px;
+  height: 116px;
+  background-image: url(./img/VisaCard/MasterCrad-Logo.svg);
+  position: relative;
+  margin-left: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 .visanumber,
 .user-name {
@@ -297,6 +393,7 @@ section {
   background-image: none;
   background-color: #c4c4c4 !important;
 }
+
 .first-row-form {
   width: 260px;
   display: flex;
@@ -344,11 +441,25 @@ section {
 .transaction-list {
   display: flex;
   flex-direction: column;
+  height: 500px;
+  overflow-y: auto;
+}
+.transaction-list::-webkit-scrollbar {
+  width: 1rem;
+}
+.transaction-list::-webkit-scrollbar-track {
+  background-color: #3a3cd3;
+  border-radius: 10px;
+}
+.transaction-list::-webkit-scrollbar-thumb {
+  background-color: #af339d;
+  height: 20px;
+  border-radius: 10px;
 }
 .transaction-list p {
   font-size: 0.6rem;
 }
-.withdraw {
+.Withdrawal {
   background-color: #fabbbb;
   border-radius: 19px;
   padding: 0 1rem 1rem 1rem;
@@ -361,7 +472,7 @@ section {
   margin-top: 1.5rem;
 }
 .deposit:hover,
-.withdraw:hover {
+.Withdrawal:hover {
   box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
 }
 
