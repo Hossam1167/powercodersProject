@@ -13,24 +13,24 @@ humIcon.addEventListener("click", () => {
 let users = [
   {
     id: 1,
-    firstname: "Hossam el din",
-    lastname: "Baioumy",
+    firstname: "John",
+    lastname: "Tommy",
     Balance: 4500,
-    address: "Luegislandstrasse 51",
+    address: "strasse 51",
     password: "12345",
-    username: "hossameldin.baioumy@gmail.com",
-    EfinanceNumber: 518541891,
+    username: "john.tommy@gmail.com",
+    EfinanceNumber: 95216143589932,
     Trasactions: [3, 4, 5],
   },
   {
     id: 2,
-    firstname: "Ryan",
-    lastname: "Baioumy",
+    firstname: "Roni",
+    lastname: "Smith",
     Balance: 6500,
-    address: "Luegislandstrasse 595",
-    password: "rsk1236",
-    username: "ryan.baioumy@gmail.com",
-    EfinanceNumber: 94894852988,
+    address: "strasse 595",
+    password: "8961236",
+    username: "roni.smith@gmail.com",
+    EfinanceNumber: 95216143588634,
     Trasactions: [1, 2, 3],
   },
   {
@@ -142,7 +142,7 @@ let timeStamp = function () {
   let hours = makeTwodigits(today.getHours());
   let minutes = makeTwodigits(today.getMinutes());
   let seconds = makeTwodigits(today.getSeconds());
-  let times = `${minutes}:${hours}`;
+  let times = `${hours}:${minutes}`;
   return times;
 };
 function makeTwodigits(number) {
@@ -165,7 +165,7 @@ const creatTransactionNotifications = function (Trasactions) {
     <li class="${type}">
             <div class="transaction-name-row">
               <h5 class="transactiontype">${type}</h5>
-              <p class="transactiondate">at ${time}  on${date}</p>
+              <p class="transactiondate"> at ${time} on ${date} </p>
               <p><strong class="transactionAmmount">${value}</strong>CHF</p>
             </div>
             <p>

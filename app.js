@@ -2,31 +2,51 @@
 let users = [
   {
     id: 1,
-    firstname: "Hossam el din",
-    lastname: "Baioumy",
+    firstname: "John",
+    lastname: "Tommy",
     Balance: 4500,
-    address: "Luegislandstrasse 51",
+    address: "strasse 51",
     password: "12345",
-    username: "hossameldin.baioumy@gmail.com",
-    EfinanceNumber: 518541891,
+    username: "john.tommy@gmail.com",
+    EfinanceNumber: 95216143589932,
     Trasactions: [3, 4, 5],
   },
   {
     id: 2,
-    firstname: "Ryan",
-    lastname: "Baioumy",
+    firstname: "Roni",
+    lastname: "Smith",
     Balance: 6500,
-    address: "Luegislandstrasse 595",
-    password: "rsk1236",
-    username: "ryan.baioumy@gmail.com",
-    EfinanceNumber: 94894852988,
+    address: "strasse 595",
+    password: "8961236",
+    username: "roni.smith@gmail.com",
+    EfinanceNumber: 95216143588634,
+    Trasactions: [1, 2, 3],
+  },
+  {
+    id: 3,
+    firstname: "Test",
+    lastname: "Powercoders",
+    Balance: 7500,
+    address: "pfingstweidstrasse 110",
+    password: "test",
+    username: "test@powercoders.org",
+    EfinanceNumber: 9489480105101,
     Trasactions: [1, 2, 3],
   },
 ];
 // retrive the updated data from the user page and updating the users Informations.
 
 let usersUpdated = JSON.parse(localStorage.getItem("users"));
-users = usersUpdated;
+
+//Update users informations
+let update = function (users) {
+  if (users !== usersUpdated) {
+    users = usersUpdated;
+    return users;
+  }
+};
+update();
+
 /* End User Date and User UI  */
 
 let userNameEfinance = document.getElementById("username1236");
@@ -43,7 +63,7 @@ submitButton.addEventListener("click", () => {
         console.log(localStorage.setItem("id", user.id));
 
         localStorage.setItem("users", JSON.stringify(users)); // Users Data object to move to the next page.
-        window.open("/user.html"); //Open user page
+        window.open("./user.html"); //Open user page
       } else {
         alert("Username or password doesn't match");
       }
